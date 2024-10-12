@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="white" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Student-Restaurant">
+  <meta name="msapplication-TileImage" content="icons/icon-144.png">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <title>Restaurants</title>
+  <link href="./css/style.css" rel="stylesheet">
+  <script src="build/main.js" type="module"></script>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="icons/icon-152.png">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title">Restaurants</h1>
+    <div id="checkbox-tick">
+      <input type="checkbox" class="checkbox" id="checkbox">
+      <label for="checkbox" class="checkbox-label">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <span class="ball"></span>
+      </label>
+    </div>
+    <div id="signs">
+      <button id="signUp">Sign Up</button>
+      <button id="signIn">Log In</button>
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+  <div id="napit">
+    <button id="sodexo">Sodexo</button>
+    <button id="compass">Compass Group</button>
+    <button id="reset">Show all</button>
+  </div>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+    </tr>
+    <!-- Add restaurants here -->
+  </table>
+
+  <dialog id="signUpDialog">
+    <form id="signUpForm">
+      <h2>Sign Up</h2>
+      <label for="firstname">Name:</label>
+      <input type="text" id="firstname" required>
+      <label for="familyname">Family Name:</label>
+      <input type="text" id="familyname" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+      <label for="phone">Phone:</label>
+      <input type="number" id="phone">
+      <label for="username">Username:</label>
+      <input type="text" id="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+      <button type="submit" id="signUpButton">Register</button>
+      <button type="button" id="closeSignUp">Close</button>
+    </form>
+  </dialog>
+
+  <dialog id="logInDialog">
+    <form id="signInForm">
+      <h2>Log In</h2>
+      <label for="logInUsername">Username:</label>
+      <input type="text" id="logInUsername" required>
+      <label for="logInPassword">Password:</label>
+      <input type="password" id="logInPassword" required>
+      <button type="submit" id="submitLogIn">Log In</button>
+      <button type="button" id="closeSignIn">Close</button>
+      <p><a href="#">Forgot Password?</a></p>
+    </form>
+  </dialog>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
